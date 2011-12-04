@@ -1,8 +1,9 @@
 #coding: utf-8
-RailsAdmin.authorize_with do
-  render :text => "没有权限！" unless current_user.admin?
-end
 RailsAdmin.config do |config|
+  config.authorize_with do
+    render :text => "没有权限!" unless current_user.admin?
+  end
+
   config.model Article do
     label "全部文章"
     list do
