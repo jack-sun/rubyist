@@ -1,10 +1,10 @@
 GIT
   remote: git://github.com/sferik/rails_admin.git
-  revision: 50cb40b85aac9e6a721cc5d337b7a7eb07feb86b
+  revision: 87aff45576e914d63997735731d3a21f7ecf4390
   specs:
     rails_admin (0.0.1)
       bbenezech-nested_form (~> 0.0.2)
-      bootstrap-sass (~> 1.4)
+      bootstrap-sass (~> 1.4.1)
       builder (~> 3.0)
       coffee-rails (~> 3.1)
       haml (~> 3.1)
@@ -78,7 +78,7 @@ GEM
       warden (~> 1.1)
     erubis (2.7.0)
     eventmachine (0.12.10)
-    execjs (1.2.9)
+    execjs (1.2.11)
       multi_json (~> 1.0)
     faraday (0.7.5)
       addressable (~> 2.2.6)
@@ -125,7 +125,7 @@ GEM
     omniauth (1.0.1)
       hashie (~> 1.2)
       rack
-    omniauth-github (1.0.0)
+    omniauth-github (1.0.1)
       omniauth (~> 1.0)
       omniauth-oauth2 (~> 1.0)
     omniauth-oauth2 (1.0.0)
