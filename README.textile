@@ -17,6 +17,7 @@ h1. Heroku配置
 
 heroku config:add RUBYIST_EMAIL=email RUBYIST_PASSWORD=password RUBYIST_HOST=host
 heroku config:add RUBYIST_GITHUB_KEY=key RUBYIST_GITHUB_SECRET=secret
+heroku config:add export NEW_RELIC_LICENSE_KEY=new_relic_license_key
 
 h1. 开发环境配置（~/.bashrc）
 
@@ -24,6 +25,7 @@ h1. 开发环境配置（~/.bashrc）
 # export RUBYIST_PASSWORD=password
 # export RUBYIST_GITHUB_KEY=github_key
 # export RUBYIST_GITHUB_SECRET=github_secret
+# export NEW_RELIC_LICENSE_KEY=new_relic_license_key
 
 h1. 演示
 

@@ -25,6 +25,7 @@ gem "ancestry", '~>1.2'
 #BBRedCloth for bbcode and textite
 gem 'BBRedCloth', '~>0.8', :require=>"RedCloth"
 gem 'nokogiri', '~>1.5'
+gem 'newrelic_rpm', '~>3.1.1'
 group :development do
   gem 'mysql2', '~>0.3'
   gem "heroku", '~>2.14'
