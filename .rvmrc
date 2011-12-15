@@ -1,1 +1,1 @@
-rvm use 1.9.3-rc1@rubyist --create
+rvm use 1.9.3-p0@rubyist --create
