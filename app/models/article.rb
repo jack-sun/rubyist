@@ -1,6 +1,7 @@
 #coding: utf-8
 require "ranking"
 class Article < ActiveRecord::Base
+  acts_as_cached(:ttl => 7.days)
   acts_as_taggable_on :tags
 
   include Ranking

@@ -1,4 +1,5 @@
 class Notification < ActiveRecord::Base
+  acts_as_cached(:ttl => 7.days)
   belongs_to :user
   belongs_to :article
   belongs_to :comment

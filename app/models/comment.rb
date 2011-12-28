@@ -5,6 +5,7 @@ class Comment < ActiveRecord::Base
   belongs_to :article, :counter_cache => true
   belongs_to :user, :counter_cache => true
   has_many :notifications
+  acts_as_cached
 
   validates :body, :presence => true
 

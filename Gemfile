@@ -18,6 +18,10 @@ gem "kaminari", '~>0.12'
 gem 'devise', '~>1.4'
 gem "coderay", '~>1.0'
 
+gem "hiredis", "~> 0.3.1"
+gem "redis", "~> 2.2.0", :require => ["redis/connection/hiredis", "redis"]
+gem "second_level_cache", :git => "git@github.com:hooopo/second_level_cache.git"
+
 gem "omniauth", '~>1.0'
 gem "omniauth-github", '~>1.0'
 

@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   after_filter :mark_notifications_as_read, :only => [:show]
 
   def index
-    @articles = Article.includes(:user).order("id DESC").page(params[:page])
+    @articles = Article.order("id DESC").page(params[:page])
     respond_to do |format|
       format.html 
       format.rss
@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
     @comment = @article.comments.new
-    @comments = @article.comments.includes(:user).page(params[:page]).roots
+    @comments = @article.comments.page(params[:page]).roots
   end
 
   def new
