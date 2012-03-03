@@ -15,7 +15,7 @@ gem 'acts-as-taggable-on', '~>2.1'
 
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem "kaminari", '~>0.12'
-gem 'devise', '~>1.4'
+gem 'devise', '~>2.0'
 gem "coderay", '~>1.0'
 
 gem "omniauth", '~>1.0'
