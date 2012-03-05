@@ -1,15 +1,23 @@
 <% content_for(:title) do %>
     所有文章
 <% end %>
+<div class="container">
+    <table class="table table-striped  span8">
+        <% @articles.each do |article| %>
+            <tr>
+                <td>
+                    <%= link_to(article.title, article_path(article)) %>
+                </td>
+                <td>
+                    <%= link_to(article.user_nick_name, user_path(article.user), :class => "pull-right")%>
+                </td>
+            </tr>
+        <% end %>
+        <tr>
+            <td colspan="2">
+                <%= paginate @articles %>
+            </td>
+        </tr>
+    </table>
+</div>
 
-<h1>所有文章</h1>
-<ul class="articles-list">
-    <% @articles.each do |article| %>
-        <li>
-            <%= link_to(article.title, article_path(article)) %>
-            <span class="small">作者：<%= link_to(article.user_nick_name, user_path(article.user))%></span>
-        </li>
-    <% end %>
-</ul>
-
-<%= paginate @articles %>

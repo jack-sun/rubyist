@@ -1,12 +1,22 @@
 <% content_for(:title) do %>
     所有标签
 <% end %>
-
-<h1>所有标签</h1>
-<ul>
-    <% @tags.each do |tag| %>
-        <li>
-            <%= link_to tag.name, tag_path(tag) %>
-        </li>
-    <% end %>
-</ul>
+<% content_for(:head) do %>
+    <style type="text/css">
+        ul.tag li{
+            display:inline;
+            float:left;
+            padding-bottom: 10px;
+            padding-left:10px;
+        }
+    </style>
+<%end%>
+<div class="container">
+    <ul class="tag span8">
+        <% @tags.each do |tag| %>
+            <li>
+                <%= link_to tag.name, tag_path(tag) %>
+            </li>
+        <% end %>
+    </ul>
+</div>

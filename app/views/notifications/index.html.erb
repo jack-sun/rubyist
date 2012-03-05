@@ -2,15 +2,15 @@
     所有通知
 <% end %>
 
-<h1>所有通知</h1>
-<ul class="articles-list">
-    <% @notifications.each do |notice| %>
-        <li>
-            <%= "<b>[新]</b>".html_safe  if notice.unread? %>
+<div class="container"
+     <ul class="articles-list">
+        <% @notifications.each do |notice| %>
+            <li>
+                <%= "<b>[新]</b>".html_safe  if notice.unread? %>
 
-            <%= link_to(notice.comment_user_nick_name, user_path(notice.comment.user)) %>回复了文章<%= link_to(notice.article_title, article_path(notice.article, :anchor => "comment_#{notice.comment_id}")) %>
-        </li>
-    <% end %>
-</ul>
-
+                <%= link_to(notice.comment_user_nick_name, user_path(notice.comment.user)) %>回复了文章<%= link_to(notice.article_title, article_path(notice.article, :anchor => "comment_#{notice.comment_id}")) %>
+            </li>
+        <% end %>
+    </ul>
+</div>
 <%= paginate @notifications %>

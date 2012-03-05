@@ -1,12 +1,14 @@
 <% content_for(:title) do %>
     <%= @tag.name %>
 <% end %>
-<h1><%= @tag.name %></h1>
-<ul>
-    <% @articles.each do |article| %>
-        <li>
-            <%= link_to article.title, article_path(article) %>
-        </li>
-    <% end %>
-</ul>
+<h2><%= @tag.name %></h2>
+<div class="container">
+    <ul>
+        <% @articles.each do |article| %>
+            <li>
+                <%= link_to article.title, article_path(article) %>
+            </li>
+        <% end %>
+    </ul>
+</div>
 <%= paginate @articles %>

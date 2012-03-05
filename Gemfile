@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '~>3.1'
 gem 'haml', '~>3.1'
 gem 'rails-i18n', '~>0.1'
+gem 'twitter-bootstrap-rails', "~> 2.0"
 
 group :assets do
   gem 'sass-rails', '~>3.1'
