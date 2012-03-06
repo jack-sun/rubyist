@@ -7,13 +7,13 @@
 </div>
 <div class="article-info">
     <span class="author">
-      作者：<%= link_to(@article.user_nick_name, user_path(@article.user))%>
+        作者：<%= link_to(@article.user_nick_name, user_path(@article.user))%>
     </span>
     <span class="time">
-      时间：<%= I18n.l(@article.created_at, :format => :long) %>
+        时间：<%= I18n.l(@article.created_at, :format => :long) %>
     </span>
     <span class="comment-num">
-      评论(<%= @article.comments_count %>)
+        评论(<%= @article.comments_count %>)
     </span>
 </div>
 <div class="content">
@@ -22,9 +22,10 @@
         标签
         <%= tag_with_link(@article) %>
     </p>
-    <%= render :partial => "share/share", :locals => {:article => @article} %>
+
     <%= operation_links_for(current_user, @article)%>
 </div>
+<%= render :partial => "share/share", :locals => {:article => @article} %>
 <div id="comments">
     <%= nested_comments @article.comments.includes(:user).arrange(:order => "created_at asc") %>
     <%= paginate @comments %>

@@ -1,12 +1,12 @@
 <div class="reply">
     <%= form_for([article, comment]) do |f| %>
-        <div class="field">
+        <p>
             <%= f.hidden_field :parent_id, :value => params[:parent_id] %>
-            <%= f.text_area :body %>
-        </div>
-        <div>
-          <%= f.submit("回复", :disable_with => '请稍等...', :class => "btn btn-primary") %>
-        </div>
+            <%= f.text_area :body, :class => "span9" %>
+        </p>
+        <p>
+            <%= f.submit("回复", :disable_with => '请稍等...', :class => "btn btn-primary") %>
+        </p>
     <% end %>
 </div>
 

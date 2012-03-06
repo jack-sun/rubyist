@@ -1,12 +1,10 @@
-<h2>忘记密码？</h2>
-
-<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+<%= form_for(resource, :as => resource_name, :url => password_path(resource_name),  :html => { :method => :post, :class => "well form-horizontal" }) do |f| %>
     <%= devise_error_messages! %>
 
-    <p><%= f.label :email, "邮箱" %><br />
+    <p><%= f.label :email, "邮箱" %>
         <%= f.email_field :email %></p>
 
-      <p><%= f.submit "发送重新设置密码邮件", :disable_with => '请稍等...', :class => "btn btn-primary" %></p>
+    <p><%= f.submit "发送重新设置密码邮件", :disable_with => '请稍等...', :class => "btn btn-primary" %></p>
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>
