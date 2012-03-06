@@ -1,6 +1,5 @@
 <div class="reply">
     <%= form_for([article, comment]) do |f| %>
-        <%= render :partial => "share/error_message", :locals => {:target => comment} %>
         <div class="field">
             <%= f.hidden_field :parent_id, :value => params[:parent_id] %>
             <%= f.text_area :body, :cols => 80, :rows => 20 %>

@@ -22,5 +22,10 @@ module ApplicationHelper
     text.gsub(/\[gist\]<a[^>]+>(https?:\/\/gist.github.com\/[\d]+)\.js<\/a>\[\/gist\]/, '<script src="\1.js"></script>')
   end
 
+  def render_alert
+    %W{info success error}.map do |key|
+      render "share/alert/#{key}" if flash[key.to_sym]
+    end.compact.join.html_safe
+  end
 
 end

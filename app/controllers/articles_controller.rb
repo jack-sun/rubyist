@@ -30,9 +30,11 @@ class ArticlesController < ApplicationController
     @article = Article.new(params[:article].reject{|key, _| key == "tag_list"}.merge(:user => current_user))
     if @article.save
       current_user.tag(@article, :with => params[:article][:tag_list], :on => :tags)
-      redirect_to @article, :notice => '文章成功！'
+      flash[:success] = "发表文章成功!"
+      redirect_to @article
     else
       @article.tag_list = params[:article][:tag_list]
+      flash.now[:error] = @article.errors.full_messages.first
       render :action => "new" 
     end
   end
@@ -41,8 +43,10 @@ class ArticlesController < ApplicationController
     @article = current_user.articles.find(params[:id])
     if @article.update_attributes(params[:article].reject{|key, _| key == "tag_list"})
       current_user.tag(@article, :with => params[:article][:tag_list], :on => :tags)
-      redirect_to @article, :notice => '文章更新成功！'
+      flash[:success] = '文章更新成功！'
+      redirect_to @article
     else
+      flash.now[:error] = @article.errors.full_messages.first
       render :action => "edit"
     end
   end
@@ -50,7 +54,8 @@ class ArticlesController < ApplicationController
   def destroy
     @article = current_user.articles.find(params[:id])
     @article.destroy
-    redirect_to user_articles_path(current_user), :notice => "删除成功！"
+    flash[:success] = "删除成功！"
+    redirect_to user_articles_path(current_user)
   end
 
   private

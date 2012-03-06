@@ -11,17 +11,20 @@ class CommentsController < ApplicationController
     @article = Article.find(params[:article_id])
     @comment = @article.comments.new(params[:comment].merge(:user => current_user))
     if @comment.save
-      redirect_to article_path(@article), :notice => "评论成功！"
+      flash[:success] = "评论成功！"
+      redirect_to article_path(@article)
     else
-      render "comments/new", :notice => "评论失败！"
+      flash.now[:error] = "评论失败！"
+      render "comments/new"
     end
   end
 
   def destroy
     @comment = current_user.comments.find_by_id(params[:id])
     if @comment.has_children?
-      flash[:notice] = "被引用过的回复不能删除！"
+      flash[:error] = "被引用过的回复不能删除！"
     else
+      flash[:success] = "评论删除成功！"
       @comment.destroy
     end
     redirect_to article_path(@comment.article)

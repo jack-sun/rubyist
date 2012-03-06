@@ -1,7 +1,5 @@
 <%= form_for(@article) do |f| %>
 
-    <%= render :partial => "share/error_message", :locals => {:target => @article} %>
-
     <div class="field">
         <%= f.label :title, "标题", :size => 45 %><br />
         <%= f.text_field :title %>
