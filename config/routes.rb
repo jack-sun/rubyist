@@ -18,10 +18,6 @@ Rubyist::Application.routes.draw do
   resources :notifications, :only => [:index]
   
   match "about"         => "about#index",   :as => :about
-  match "help/bbcode"   => "help#bbcode",   :as => :bbcode
-  match "help/textitle" => "help#textitle", :as => :textitle
-  match "help/gist"     => "help#gist",     :as => :gist
-  match "help"  => "help#index", :as => :help
   match "site"  => "site#index", :as => :site
 
   root :to => "site#index" 

@@ -1,18 +1,16 @@
-<h2>注册</h2>
-
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html =>{:class => "well form-horizontal"}) do |f| %>
     <%= devise_error_messages! %>
 
-    <p><%= f.label :email, "邮箱" %><br />
+    <p><%= f.label :email, "邮箱" %>
         <%= f.email_field :email %></p>
 
-    <p><%= f.label :nick_name, "昵称" %><br />
+    <p><%= f.label :nick_name, "昵称" %>
         <%= f.text_field :nick_name %></p>
 
-    <p><%= f.label :password, "密码" %><br />
+    <p><%= f.label :password, "密码" %>
         <%= f.password_field :password %></p>
 
-    <p><%= f.label :password_confirmation, "重复密码" %><br />
+    <p><%= f.label :password_confirmation, "重复密码" %>
         <%= f.password_field :password_confirmation %></p>
 
       <p><%= f.submit "确认", :disable_with => '请稍等...', :class => "btn btn-primary" %></p>

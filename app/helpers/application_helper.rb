@@ -23,7 +23,7 @@ module ApplicationHelper
   end
 
   def render_alert
-    %W{info success error}.map do |key|
+    %W{info success error notice}.map do |key|
       render "share/alert/#{key}" if flash[key.to_sym]
     end.compact.join.html_safe
   end
