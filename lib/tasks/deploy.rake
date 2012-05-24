@@ -3,7 +3,7 @@ task :deploy do
   puts `git push heroku`
 
   puts 'Running database migrations ...'
-  puts `heroku rake db:migrate`
+  puts `heroku run rake db:migrate`
 
   release_name = "release-#{Time.now.utc.strftime("%Y%m%d%H%M%S")}"
   puts "Tagging release as '#{release_name}'"
