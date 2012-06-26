@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddVisibleFieldInArticles < ActiveRecord::Migration
   def up
     add_column :articles, :visible, :boolean, :default => true

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class MailMan < ActionMailer::Base
   default :from => ENV["RUBYIST_EMAIL"]
 

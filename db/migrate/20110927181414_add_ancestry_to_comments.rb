@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddAncestryToComments < ActiveRecord::Migration
   def self.up
     add_column :comments, :ancestry, :string

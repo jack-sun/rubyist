@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Ranking
   def self.included(base)
     base.send(:include, InstanceMethods)

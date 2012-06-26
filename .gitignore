@@ -6,3 +6,4 @@ tmp/
 nbproject/*
 config/database.yml
 public/assets/*
+.rvmrc

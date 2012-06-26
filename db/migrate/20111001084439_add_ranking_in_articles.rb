@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddRankingInArticles < ActiveRecord::Migration
   def self.up
     add_column :articles, :ranking, :integer

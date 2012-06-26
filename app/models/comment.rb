@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #coding: utf-8
 class Comment < ActiveRecord::Base
   acts_as_tree(:orphan_strategy => :rootify)

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 Rubyist::Application.routes.draw do
   match "user/:user_id" => "user/articles#index", :as => :user
   

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ApplicationHelper       
   def coderay(text)     
     text.gsub(/\[code( lang="(.+?)")?\](.+?)\[\/code\]/m) do    

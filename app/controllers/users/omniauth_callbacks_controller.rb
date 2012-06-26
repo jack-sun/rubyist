@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def github
     # You need to implement the method below in your model

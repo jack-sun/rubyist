@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class TagsController < ApplicationController
   def index
     #TODO ActsAsTaggableOn::Tag.page not work properly

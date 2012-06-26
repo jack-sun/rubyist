@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 if Rails.env != 'test'
 
   c =YAML::load(ERB.new(File.read("#{Rails.root}/config/email.yml")).result)

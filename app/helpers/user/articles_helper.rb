@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module User::ArticlesHelper
   def operation_links_for(user, article)
     return "" unless user

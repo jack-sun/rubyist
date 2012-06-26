@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #coding: utf-8
 RailsAdmin.config do |config|
   config.authorize_with do

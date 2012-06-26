@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CommentObserver < ActiveRecord::Observer
   def after_save(comment)
     comment.related_users.each do |user|

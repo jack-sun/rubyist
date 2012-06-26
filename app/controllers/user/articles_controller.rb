@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class User::ArticlesController < User::BaseController
   before_filter :find_user
   

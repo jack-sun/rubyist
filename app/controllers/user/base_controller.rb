@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class User::BaseController < ApplicationController
   private
   def find_user

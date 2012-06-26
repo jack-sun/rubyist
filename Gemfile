@@ -31,6 +31,9 @@ group :development do
   gem "heroku", '~>2.14'
   gem 'taps', '~>0.3', :require => false
   gem 'capistrano', '~>2.9'
+  gem 'magic_encoding', "~> 0.0.2", :require => false
+  gem 'awesome_print'
+  gem 'pry-rails', "~> 0.1"
 end
 
 group :production do

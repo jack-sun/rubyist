@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ActsAsTaggableOn::Tag < ::ActiveRecord::Base
   def to_param
     URI.escape(self.name)
